@@ -34,12 +34,12 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
-//                    | GUI NUM| SYMB | SPC |   | ENT | NAVETC  | ALT |
+//                    | NUM | SYMB| SPC |   | ENT | NAVETC  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G   &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &lt NUMBERS LGUI &mo SYMBOLS &kp SPACE   &kp RET &mo NAVETC &kp RALT
+                  &mo NUMBERS &mo SYMBOLS &kp SPACE   &kp RET &mo NAVETC &kp RALT
                         >;
                 };
 
@@ -47,13 +47,13 @@
 // -----------------------------------------------------------------------------------------
 // |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
 // | CTRL |  ~  |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |      |
-// | SHFT |  `  |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |      | // TODO: Fix this row when &mkp is committed
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | SHFT |  `  |     | GUI |     |     |   |  _  |  +  |  [  |  ]  |  \  |      | // TODO: Fix this row when &mkp is committed
+//                    |     |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
-   &kp LCTRL &kp TILDE &trans  &trans    &trans    &trans        &kp MINUS &kp EQUAL &kp LBRC        &kp RBRC &kp PIPE &trans
-   &kp LSHFT &kp GRAVE &trans  &trans    &trans    &trans        &kp UNDER &kp PLUS  &kp LBKT        &kp RBKT &kp BSLH &trans
-                                   &kp LGUI &trans &kp SPACE     &kp RET &trans &kp RALT
+   &kp  ESC  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
+   &kp LCTRL &kp TILDE &trans  &trans     &trans    &trans        &kp MINUS &kp EQUAL &kp LBRC        &kp RBRC &kp PIPE &trans
+   &kp LSHFT &kp GRAVE &trans  &kkp LGUI  &trans    &trans        &kp UNDER &kp PLUS  &kp LBKT        &kp RBKT &kp BSLH &trans
+                                   &trans &trans &kp SPACE        &kp RET &trans &kp RALT
                         >;
                 };
 
@@ -61,13 +61,13 @@
 // -----------------------------------------------------------------------------------------
 // | |      |  F7  |  F8   |  F9   |       |   |       |  7  |  8  |  9  |  =  | DEL|
 // | |      |  F4  |  F5   |  F6   |       |   |       |  4  |  5  |  6  |  /  | -  |
-// | |      |  F1  |  F2   |  F3   |       |   |       |  1  |  2  |  3  |  *  | +  |
-//                 | trans | trans | trans |   | trans |  .  |  0  |
+// | |      |  F1  |  F2   |  F3   |       |   |   .   |  1  |  2  |  3  |  *  | +  |
+//                 | trans | trans | trans |   | trans |     |  0  |
                         bindings = <
-   &none &none &kp F7 &kp F8 &kp F9 &none     &none  &kp N7 &kp N8 &kp N9 &kp EQUAL &kp DEL
-   &none &none &kp F4 &kp F5 &kp F6 &none     &none  &kp N4 &kp N5 &kp N6 &kp FSLH  &kp MINUS
-   &none &none &kp F1 &kp F2 &kp F3 &none     &none  &kp N1 &kp N2 &kp N3 &kp KP_MULTIPLY  &kp PLUS
-                     &trans &trans &trans     &trans &kp DOT &kp N0 
+   &none &none &kp F7 &kp F8 &kp F9 &none     &none   &kp N7 &kp N8 &kp N9 &kp EQUAL &kp DEL
+   &none &none &kp F4 &kp F5 &kp F6 &none     &none   &kp N4 &kp N5 &kp N6 &kp FSLH  &kp MINUS
+   &none &none &kp F1 &kp F2 &kp F3 &none     &kp DOT &kp N1 &kp N2 &kp N3 &kp KP_MULTIPLY  &kp PLUS
+                     &trans &trans &trans     &trans &none &kp N0 
                         >;
                 };
 
