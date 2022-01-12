@@ -8,9 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define SYMBOLS 1
-#define NUMBERS 2
-#define NAVETC 3
+#define DEFAULT 0
+#define WIN 1
+#define SYMBOLS 2
+#define NUMBERS 3
+#define NAVETC 4
 
 / {
         behaviors {
@@ -38,6 +40,20 @@
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T                           &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &hm LCTRL A &hm LALT S &hm LGUI D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm RGUI K &hm RALT L &hm RCTRL SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                  &mo NUMBERS &mo SYMBOLS &kp SPACE                  &kp RET &mo NAVETC &kp RALT
+                        >;
+                };
+
+                windows_layer {
+// -----------------------------------------------------------------------------------------
+// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+//                    | NUM | SYMB| SPC |   | ENT | NAVETC  | ALT |
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T                           &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B                           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                   &mo NUMBERS &mo SYMBOLS &kp SPACE                  &kp RET &mo NAVETC &kp RALT
                         >;
@@ -75,13 +91,13 @@
 // -----------------------------------------------------------------------------------------
 // |        | BT_SEL 0 | BT_SEL 1 | BT_SEL 2 | BT_SEL 3 |       |    | PG_UP |      | UP   |       | HOME | DEL|
 // |        |          | C_VOL_DN | K_MUTE   | C_VOL_UP |       |    | PG_DN | LEFT | DOWN | RIGHT | END  |    |
-// | BT_CLR |          |          |          |          |       |    |       |      |      |       |      |    |
+// | BT_CLR |          |          |          |          |tog WIN|    |       |      |      |       |      |    |
 //                     |          | trans    | trans    | trans |    | trans | trans| trans|
                         bindings = <
-   &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none     &kp PG_UP  &none    &kp UP   &none     &kp HOME  &kp DEL
-   &none      &none        &kp C_VOL_DN &kp K_MUTE   &kp C_VOL_UP &none     &kp PG_DN  &kp LEFT &kp DOWN &kp RIGHT &kp END   &none
-   &bt BT_CLR &none        &none        &none        &none        &none     &none      &none    &none    &none     &none     &none 
-                                                   &trans &trans &trans     &trans &trans &trans 
+   &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none       &kp PG_UP  &none    &kp UP   &none     &kp HOME  &kp DEL
+   &none      &none        &kp C_VOL_DN &kp K_MUTE   &kp C_VOL_UP &none       &kp PG_DN  &kp LEFT &kp DOWN &kp RIGHT &kp END   &none
+   &bt BT_CLR &none        &none        &none        &none        &tog WIN    &none      &none    &none    &none     &none     &none 
+                                                      &trans &trans &trans    &trans &trans &trans 
                         >;
                 };
 
