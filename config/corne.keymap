@@ -32,6 +32,8 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                // label to be shown on OLED screen:
+                label = " DEFAULT"
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -46,6 +48,8 @@
                 };
 
                 windows_layer {
+                // label to be shown on OLED screen:
+                label = " WIN"
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -60,6 +64,8 @@
                 };
 
                 symbols_layer {
+                // label to be shown on OLED screen:
+                label = " SYMBOLS"
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |   @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
 // | CTRL |  ~  |      |     |     |     |   |  -  |  =  |  {  |  }  | "|" |      |
@@ -74,6 +80,8 @@
                 };
 
                 numbers_layer {
+                // label to be shown on OLED screen:
+                label = " NUMBERS"
 // -----------------------------------------------------------------------------------------
 // | ESC |      |  F7  |  F8   |  F9   |       |   |       |  7  |  8  |  9  |  =  | BKSP|
 // |     |      |  F4  |  F5   |  F6   |       |   |       |  4  |  5  |  6  |  /  | -   |
@@ -88,6 +96,8 @@
                 };
 
                 navi_layer {
+                // label to be shown on OLED screen:
+                label = " NAVI"
 // -----------------------------------------------------------------------------------------
 // |        | BT_SEL 0 | BT_SEL 1 | BT_SEL 2 | BT_SEL 3 |       |    | PG_UP |      | UP   |       | HOME | DEL|
 // |        |          | C_VOL_DN | K_MUTE   | C_VOL_UP |       |    | PG_DN | LEFT | DOWN | RIGHT | END  |    |
